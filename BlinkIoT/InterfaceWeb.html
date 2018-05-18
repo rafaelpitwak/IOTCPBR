@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>.:: IoT - GPMECATRONICA ::.</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type='text/javascript' src='mosquitto.js'></script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.min.js'></script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+	<center>
+	<table border ="0" width="100%">
+		</tr>
+			<td width="100%">
+				<center><img src="gpmecatronica.png" height="50%" width="50%"></center>
+			</td>
+		</tr>		
+	</table>
+	
+	<table border ="0" width="100%">
+		</tr>
+			<td width="50%">
+			</td>
+			<td width="50%">
+			</td>
+		</tr>		
+	</table>
+	
+
+<div id="publish">
+    <br>
+	<h2>Definir os tópicos MQTT de subscribe (assinatura) e publish (publicação)</h2>
+	<p>Tópico de envio de informações: <input class="txt" id="pub-topic-text" type="text" value="CPBAEnvia"></p>
+	<p>Tópico de recepcao de informações: <input class="txt" id="pub-subscribe-text" type="text" value="CPBARecebe"></p>
+	<br>	
+</div>	 
+	
+<div id="broker">
+	<h2>Conectar ao servidor / broker</h2>
+	<input class="but" id="connect-button" type="button" value="Conectar">
+	<input class="but" id="disconnect-button" type="button" value="Desconectar">
+</div>
+
+<br><br>
+
+<h2>Escolher a ação desejada</h2>
+<input class="but" id="liga-output" type="button"    value="  Ligar ">
+<input class="but" id="desliga-output" type="button" value="Desligar"><br><br>
+
+<h2>Status da saída do NodeMCU recebidas via MQTT</h2>
+<div id="status_io"></div>
+
+<h2>Debug / respostas do servidor</h2>
+<div id="debug"></div>
+    
+	<script src="tmo.js" type="text/javascript"></script>
+	</center>
+</body>
+</html>
